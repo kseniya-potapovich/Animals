@@ -1,4 +1,16 @@
 public class Dog extends Animal {
+    private static Dog dog;
+
+    private Dog() {
+    }
+
+    public static Dog getDog() {
+        if (dog == null) {
+            dog = new Dog();
+        }
+        return dog;
+    }
+
     @Override
     public void voice() {
         System.out.println("Gav gav gav");
